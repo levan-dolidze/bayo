@@ -1,0 +1,35 @@
+
+.navContainer{
+    padding: 20px;
+    background-color: rgb(49, 45, 45);
+    display: flex;
+    justify-content: space-between;
+}
+
+.navContainer a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+ border-radius: 5px;
+
+}
+.active{
+   background-color:  rgb(197, 65, 65);   
+}
+.navBar{
+ padding: 25px;
+float: right;
+  
+   
+}
+.logoImg{
+ width: 70px;  
+ height: 70px; 
+
+}
+.logoImg img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 5px;
+}
