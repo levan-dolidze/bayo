@@ -11,12 +11,14 @@ import { ContactComponent } from './contact/contact.component';
 import { SaleComponent } from './sale/sale.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HttpClientJsonpModule, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClient, HttpClientJsonpModule, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { TokenInterceptor } from './interceptors/token.interceptor';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,14 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
     FormsModule,
     BrowserAnimationsModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
 
 
 
@@ -48,16 +57,15 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
 
   ],
   providers: [
-{
-  provide:HTTP_INTERCEPTORS,
-  useClass:TokenInterceptor,
-  multi:true
-}
+   
 
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 
+}
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader{
+  return new TranslateHttpLoader(http);
 }
 

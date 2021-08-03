@@ -1,29 +1,28 @@
-
-
 <div class="navContainer">
    <div class="logoImg">
-      <a href="" routerLink="home" > <img src="assets/bayoLogo.png" alt=""></a>
-   </div>     
-  
-  
-    <div class="navBar">
-<a href="" routerLink="home" routerLinkActive="active"  >home</a>
-<a href="" routerLink="aboutUs" routerLinkActive="active">about us</a>
-<a href="" routerLink="manufacturing" routerLinkActive="active" >bayo brewery</a>
-<a href="" routerLink="sale" routerLinkActive="active" >sale</a>
-<a href="" routerLink="ourBeer" routerLinkActive="active" >our beer</a>
-<a href="" routerLink="contact" routerLinkActive="active">contact</a>
+      <a href="" routerLink="home"> <img src="assets/bayoLogo.png" alt=""></a>
+   </div>
 
 
-<select name="" id="" (change)="changeLang($event.target.value)">
- 
-   <option value="en" [selected]="lang =='en'"> ENG</option>
-   <option value="de" [selected]="lang =='de'">DEU</option>
-   <option value="ka" [selected]="lang =='ka'">KA</option>
- </select>
+   <div class="navBar">
+      <a href="" routerLink="home" routerLinkActive="active"> {{"langChange.home" | translate}}</a>
+      <a href="" routerLink="aboutUs" routerLinkActive="active">{{"langChange.aboutUs" | translate}}</a>
+      <a href="" routerLink="manufacturing" routerLinkActive="active">{{"langChange.bayoBrewery" | translate}}</a>
+      <a href="" routerLink="sale" routerLinkActive="active">{{"langChange.sale" | translate}}</a>
+      <a href="" routerLink="ourBeer" routerLinkActive="active">{{"langChange.ourBeer" | translate}}</a>
+      <a href="" routerLink="contact" routerLinkActive="active">{{"langChange.contact" | translate}}</a>
 
 
+      <select name="" id="" (change)="changeLang($event.target.value)">
+
+         <option value="en" [selected]="lang =='en'"> ENG</option>
+         <option value="ka" [selected]="lang =='ka'">KA</option>
+      </select>
 
 
-</div>
+      <!-- 
+<button (click)="useLanguage('en')">en</button>
+<button (click)="useLanguage('ka')">ka</button> -->
+
+   </div>
 </div>
