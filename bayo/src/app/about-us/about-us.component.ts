@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent implements OnInit {
+  posts = [];
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
 
   ngOnInit(): void {
+
+
+    this.http.get('https://type.fit/api/quotes')
+
+      .subscribe(
+        (post: any[]) => this.posts = post
+      );
+
   }
 
 }

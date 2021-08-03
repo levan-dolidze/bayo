@@ -13,6 +13,13 @@
  border-radius: 5px;
 
 }
+.navContainer select{
+    border-radius: 5px;
+    background-color: rgb(49, 45, 45);
+    color: white;
+    cursor: pointer;
+}
+
 .active{
    background-color:  rgb(197, 65, 65);   
 }

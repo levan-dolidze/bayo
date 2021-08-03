@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+lang;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+this.lang=localStorage.getItem('lang')||'en';
+
   }
+
+changeLang(lang){
+localStorage.setItem('lang',lang);
+window.location.reload();
+
+}
 
 }

@@ -12,9 +12,9 @@ export class HomeComponent implements OnInit {
   images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/400`);
 
   constructor() {
-  this.showNavigationArrows = true;
+    this.showNavigationArrows = true;
     this.showNavigationIndicators = true;
-   }
+  }
 
   ngOnInit(): void {
   }
