@@ -1,4 +1,5 @@
 <div class="navContainer">
+   <h1 class="navSlogan" >{{"langChange.slogan" | translate}}</h1>
    <div class="logoImg">
       <a href="" routerLink="home"> <img src="assets/bayoLogo.png" alt=""></a>
    </div>
@@ -14,15 +15,16 @@
 
 
       <select name="" id="" (change)="changeLang($event.target.value)">
-
-         <option value="en" [selected]="lang =='en'"> ENG</option>
          <option value="ka" [selected]="lang =='ka'">KA</option>
+         <option value="en" [selected]="lang =='en'"> ENG</option>
       </select>
 
 
       <!-- 
 <button (click)="useLanguage('en')">en</button>
 <button (click)="useLanguage('ka')">ka</button> -->
-
+ 
    </div>
 </div>
+
+

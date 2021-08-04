@@ -1,16 +1,93 @@
-<p>home works!</p>
-<div id="carouselContainer">
-    <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows"
-        [showNavigationIndicators]="showNavigationIndicators">
-        <ng-template ngbSlide *ngFor="let image of images">
-            <div class="picsum-img-wrapper">
-                <img [src]="image" alt="Random slide">
-            </div>
-            <div class="carousel-caption">
-                <h3>No mouse navigation</h3>
-                <p>This carousel hides navigation arrows and indicators.</p>
-            </div>
-        </ng-template>
-    </ngb-carousel>
+
+<main>
+
+<h3 class="shortDescrTitle">short description</h3>
+
+ <div class="descriptionContaner">
+<div class="desc1">
+    <h3 class="descTitle">Lorem ipsum, dolor sit amet consectetur</h3>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, eos omnis cumque magnam sint illum fugiat iste laudantium dolore neque iure et quidem eligendi expedita fuga asperiores, eaque necessitatibus accusamus!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse porro minus dignissimos, quia tem</p>
 
 </div>
+
+
+<div class="desc2">
+ <img src="assets/descrImg.jpg" alt="">
+
+</div>
+
+
+ </div>
+
+
+
+    <div id="carouselContainer">
+        <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows"
+            [showNavigationIndicators]="showNavigationIndicators">
+            <ng-template ngbSlide *ngFor="let image of images">
+                <div class="picsum-img-wrapper">
+                    <img [src]="image" alt="Random slide">
+                </div>
+                <div class="carousel-caption">
+                    <h3>No mouse navigation</h3>
+                    <p>This carousel hides navigation arrows and indicators.</p>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    
+    </div>
+
+
+    <h3 class="ourProductTitle">our products</h3>
+<div class="productContainer">
+
+
+
+    <mat-card class="example-card" >
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Details</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+
+
+      
+    <mat-card class="example-card" >
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      
+    </div>
+</main>
+
+
+

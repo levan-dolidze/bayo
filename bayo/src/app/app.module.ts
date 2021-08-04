@@ -19,7 +19,8 @@ import { MatInputModule } from '@angular/material/input';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +42,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule,
     MatSelectModule,
     MatInputModule,
     TranslateModule.forRoot({

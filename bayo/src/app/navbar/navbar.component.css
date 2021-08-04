@@ -1,11 +1,22 @@
 
 .navContainer{
     padding: 20px;
-    background-color: rgb(49, 45, 45);
+    /* background-color:#344955; */
+    background-image: url("/assets/navBackImg.jpg");
     display: flex;
     justify-content: space-between;
-}
+    height: 500px;
+    position: sticky;
+    
 
+}
+.navSlogan{
+    position: absolute;
+   margin:150px;
+    color: black;
+
+   
+}
 .navContainer a{
     text-decoration: none;
     color: white;
@@ -16,7 +27,7 @@
 }
 .navContainer select{
     border-radius: 5px;
-    background-color: rgb(49, 45, 45);
+    background-color:#344955;
     color: white;
     cursor: pointer;
      margin-left: 10px;
