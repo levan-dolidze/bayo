@@ -19,8 +19,10 @@ import { MatInputModule } from '@angular/material/input';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { Router, RouterLink, RouterModule } from '@angular/router';
+import { ViewDetailsComponent } from './view-details/view-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import {MatButtonModule} from '@angular/material/button';
     OurBeerComponent,
     ContactComponent,
     SaleComponent,
-    FooterComponent
+    FooterComponent,
+    ViewDetailsComponent
 
   ],
   imports: [
@@ -41,18 +44,19 @@ import {MatButtonModule} from '@angular/material/button';
     HttpClientJsonpModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
     MatSelectModule,
     MatInputModule,
+    BrowserAnimationsModule,
+    RouterModule,
     TranslateModule.forRoot({
       loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
       }
-  })
+    })
 
 
 
@@ -60,7 +64,7 @@ import {MatButtonModule} from '@angular/material/button';
 
   ],
   providers: [
-   
+
 
   ],
   bootstrap: [AppComponent]
@@ -68,7 +72,7 @@ import {MatButtonModule} from '@angular/material/button';
 export class AppModule {
 
 }
-export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader{
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }
 

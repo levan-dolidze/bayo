@@ -10,6 +10,7 @@ main{
 width: 100%;
 object-fit: cover;
 height: 400px;
+
 }
 
 
@@ -46,6 +47,7 @@ height: 100%;
 .example-card {
     max-width: 300px;
     margin: 10px;
+
     
   }
   .ourProductTitle,.shortDescrTitle{
@@ -61,3 +63,10 @@ height: 100%;
       justify-content: center;
       flex-wrap: wrap;
   }
+  .example-card{
+      transition: 0.5s;
+  }
+ #backToTopIcon{
+     cursor: pointer;
+    
+ }

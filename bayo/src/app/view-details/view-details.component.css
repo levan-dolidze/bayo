@@ -1,0 +1,13 @@
+.example-card {
+    max-width: 300px;
+    margin: 10px;
+
+    
+  }
+
+  .picsum-img-wrapper img{
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+    
+    }

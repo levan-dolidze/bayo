@@ -5,7 +5,7 @@
     background-image: url("/assets/navBackImg.jpg");
     display: flex;
     justify-content: space-between;
-    height: 500px;
+    height: 600px;
     position: sticky;
     
 
@@ -27,8 +27,8 @@
 }
 .navContainer select{
     border-radius: 5px;
-    background-color:#344955;
-    color: white;
+    background-image: url("/assets/navBackImg.jpg");
+    color: rgb(197, 65, 65);  
     cursor: pointer;
      margin-left: 10px;
 }

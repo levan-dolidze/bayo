@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ManufacturingComponent } from './manufacturing/manufacturing.component';
 import { OurBeerComponent } from './our-beer/our-beer.component';
 import { SaleComponent } from './sale/sale.component';
+import { ViewDetailsComponent } from './view-details/view-details.component';
 
 const routes: Routes = [
  {
@@ -38,7 +39,10 @@ const routes: Routes = [
   path:'contact',
   component:ContactComponent
 },
-
+{
+path:'view-details',
+component:ViewDetailsComponent
+}
 ];
 
 @NgModule({
