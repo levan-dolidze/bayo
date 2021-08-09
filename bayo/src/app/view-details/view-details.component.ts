@@ -14,9 +14,9 @@ export class ViewDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    const kk=localStorage.getItem('detailPreview');
-this.viewProductDetails = JSON.parse(kk);
-
+    const kk = localStorage.getItem('detailPreview');
+    this.viewProductDetails = JSON.parse(kk);
+console.log(kk)
 
   }
 

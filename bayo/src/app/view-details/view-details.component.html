@@ -1,5 +1,7 @@
 
 
+<!-- 
+
 <mat-card   class="example-card" 
 @fade>
 
@@ -19,4 +21,33 @@
       <button mat-button>Details</button>
       <button mat-button>SHARE</button>
     </mat-card-actions>
-  </mat-card>
+  </mat-card> -->
+<main>
+  <div class="viewDetailsContainer">
+<div class="viewDetailsFoto">
+<img [src]="viewProductDetails.image" >
+
+
+</div>
+<div class="viewDetailsDescr">
+<h6 class="productId">product ID:{{viewProductDetails.id}}</h6>
+<h4 class="productDetailTitle">
+  {{viewProductDetails.title}}
+</h4>
+<div class="productDetailPriceContainer">
+ <h2 class="productDetailPrice">{{viewProductDetails.price}} ₾</h2> 
+<span class="productDetailOrderBtn"> <button mat-raised-button color="primary">order</button></span> 
+
+</div>
+<div class="productDetailDescription">
+<h6>description:</h6>
+<p>{{viewProductDetails.description}}</p>
+<h6>technology:</h6>
+<p>{{viewProductDetails.technology}}</p>
+</div>
+
+</div>
+
+  </div>
+
+</main>

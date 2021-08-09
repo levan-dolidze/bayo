@@ -21,29 +21,33 @@ export class HomeComponent implements OnInit {
   images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/400`);
   productPreview: Array<ProductModel> = [{
     id: 1,
-    title: "beer TRY",
-    description: "ქართული კრაფტ ლუდი",
+    title: "beer TRY limited edition",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat impedit, maxime voluptatem id blanditiis! Pariatur aliquid, dicta sapiente quibusdam laudantium totam voluptate reiciendis nemo ipsa impedit amet ducimus aut!",
+    technology:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat impedit, maxime voluptatem id blanditiis! Pariatur aliquid, dicta sapiente quibusdam laudantium totam voluptate reiciendis nemo ipsa impedit amet ducimus aut!",
     image: "assets/try.jpg",
     price: 6
   },
   {
     id: 2,
     title: "beer TRY",
-    description: "ქართული კრაფტ ლუდი",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat impedit, maxime voluptatem id blanditiis! Pariatur aliquid, dicta sapiente quibusdam laudantium totam voluptate reiciendis nemo ipsa impedit amet ducimus aut!",
+    technology:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat impedit, maxime voluptatem id blanditiis! Pariatur aliquid, dicta sapiente quibusdam laudantium totam voluptate reiciendis nemo ipsa impedit amet ducimus aut!",
     image: "assets/try.jpg",
     price: 7
   },
   {
     id: 3,
     title: "beer TRY",
-    description: "ქართული კრაფტ ლუდი",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat impedit, maxime voluptatem id blanditiis! Pariatur aliquid, dicta sapiente quibusdam laudantium totam voluptate reiciendis nemo ipsa impedit amet ducimus aut!",
+    technology:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat impedit, maxime voluptatem id blanditiis! Pariatur aliquid, dicta sapiente quibusdam laudantium totam voluptate reiciendis nemo ipsa impedit amet ducimus aut!",
     image: "assets/try.jpg",
     price: 7
   },
   {
     id: 4,
     title: "beer TRY",
-    description: "ქართული კრაფტ ლუდი",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat impedit, maxime voluptatem id blanditiis! Pariatur aliquid, dicta sapiente quibusdam laudantium totam voluptate reiciendis nemo ipsa impedit amet ducimus aut!",
+    technology:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat impedit, maxime voluptatem id blanditiis! Pariatur aliquid, dicta sapiente quibusdam laudantium totam voluptate reiciendis nemo ipsa impedit amet ducimus aut!",
     image: "assets/try.jpg",
     price: 8
   }
