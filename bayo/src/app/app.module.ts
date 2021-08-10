@@ -23,6 +23,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { ViewDetailsComponent } from './view-details/view-details.component';
+import { TrunkatePipe } from './pipes/trunkate.pipe';
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
     ContactComponent,
     SaleComponent,
     FooterComponent,
-    ViewDetailsComponent
+    ViewDetailsComponent,
+    TrunkatePipe,
+
 
   ],
   imports: [
@@ -50,6 +54,7 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
     MatInputModule,
     BrowserAnimationsModule,
     RouterModule,
+    MatTabsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

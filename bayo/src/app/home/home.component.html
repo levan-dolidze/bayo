@@ -50,12 +50,12 @@
         <div mat-card-avatar class="example-header-image"></div>
         
         <mat-card-title>{{allProductsPreview.title}}</mat-card-title>
-        <mat-card-subtitle>{{allProductsPreview.price}}₾</mat-card-subtitle>
+        <mat-card-subtitle>price:{{allProductsPreview.price}} ₾</mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image [src]="allProductsPreview.image" alt="Photo of a Shiba Inu">
       <mat-card-content>
         <p>
-          {{allProductsPreview.description}}
+          {{allProductsPreview.description|trunkate}}
         </p>
       </mat-card-content>
       <mat-card-actions>

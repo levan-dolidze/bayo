@@ -57,9 +57,21 @@ margin-top: 20px;
 
  
 }
+.productDetailPrice{
+  color:rgb(197, 65, 65);
+}
 .productDetailOrderBtn{
   margin-left: 30px;
 }
 .productDetailDescription{
   margin-top: 10px;
+}
+.deliveryTermsCont{
+  background-color: white;
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 5px;
+}
+.termsValue{
+  padding: 5px 10px;
 }

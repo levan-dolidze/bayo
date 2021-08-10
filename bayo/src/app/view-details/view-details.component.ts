@@ -11,6 +11,7 @@ import { fade } from '../modules/animations';
 })
 export class ViewDetailsComponent implements OnInit {
   viewProductDetails: Array<ProductModel>
+  // showDeliveryTerms=false;
   constructor() { }
 
   ngOnInit(): void {
@@ -19,6 +20,9 @@ export class ViewDetailsComponent implements OnInit {
 console.log(kk)
 
   }
+//   deliveryTerms(){
+//     this.showDeliveryTerms=!this.showDeliveryTerms
+//   }
+// }
 
 }
-
