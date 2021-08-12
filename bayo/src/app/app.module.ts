@@ -13,7 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClient, HttpClientJsonpModule, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { TokenInterceptor } from './interceptors/token.interceptor';
@@ -25,6 +25,9 @@ import { Router, RouterLink, RouterModule } from '@angular/router';
 import { ViewDetailsComponent } from './view-details/view-details.component';
 import { TrunkatePipe } from './pipes/trunkate.pipe';
 import {MatTabsModule} from '@angular/material/tabs';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,9 +55,14 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatCardModule,
     MatSelectModule,
     MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     RouterModule,
+    HttpClientModule,
     MatTabsModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebase),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

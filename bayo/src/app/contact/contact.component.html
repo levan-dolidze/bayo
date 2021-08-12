@@ -1,3 +1,26 @@
 <main>
-<p>contact works!</p>
+  
+  <form [hidden]="isDisplayed"  [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)" class="formField">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput type="text" formControlName="username">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Lastname</mat-label>
+      <input matInput type="text" formControlName="userLastname">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="userEmail">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>type us somthing</mat-label>
+      <textarea matInput type="text" formControlName="userText"></textarea>
+    </mat-form-field>
+    <button   [disabled]="contactForm.invalid"  mat-raised-button color="primary">Apply</button>
+  
+  </form>
+  <div class="messageSent" [hidden]="isDisplayedSent" >
+    <p>message sent</p>
+    </div>
 </main>

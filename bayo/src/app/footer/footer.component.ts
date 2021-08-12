@@ -12,10 +12,7 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  scrollToElement($element): void {
-    console.log($element);
-    $element.scrollIntoView({behavior: "smooth", block: "end", inline: "start"});
-  }
+
 
 
 }
