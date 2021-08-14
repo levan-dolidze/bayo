@@ -15,16 +15,40 @@ margin: 0 auto;
   .mat-raised-button{
       width: 100%;
   }
+
+  @keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    16% {
+       opacity: 1;
+    }
+    84% {
+       opacity: 1;
+    }
+    100% {
+       opacity: 0;
+    }
+}
+
+
+
   .messageSent{
       width: 200px;
-      height: 100px;
       text-align: center;
-      background-color: white;
+      background-color:#79c446;
       margin: 0 auto;
       margin-top: 20px;
       border-radius: 5px;
+      -webkit-animation: fadeInOut 2s;
+      animation: fadeInOut 2s;
+
+
   }
   .messageSent p{
 display: flex;
 justify-content: center;
+color: white;
+padding: 20px;
+
   }

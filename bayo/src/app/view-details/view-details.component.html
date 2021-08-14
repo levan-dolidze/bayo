@@ -1,49 +1,64 @@
-
 <main>
   <div class="viewDetailsContainer">
-<div class="viewDetailsFoto">
-<img [src]="viewProductDetails.image" >
+    <div class="viewDetailsFoto">
+      <img [src]="viewProductDetails.image">
 
 
-</div>
-<div class="viewDetailsDescr">
-<h6 class="productId">product ID:{{viewProductDetails.id}}</h6>
-<h4 class="productDetailTitle">
-  {{viewProductDetails.title}}
-</h4>
-<div class="productDetailPriceContainer">
- <h3 class="productDetailPrice">{{viewProductDetails.price}} ₾</h3> 
-<span class="productDetailOrderBtn"> <button mat-raised-button color="primary">order</button></span> 
+    </div>
+    <div class="viewDetailsDescr">
+      <h6 class="productId">product ID:{{viewProductDetails.id}}</h6>
+      <h4 class="productDetailTitle">
+        {{viewProductDetails.title}}
+      </h4>
 
-</div>
-<div class="productDetailDescription">
-<h6>description:</h6>
-<p>{{viewProductDetails.description}}</p>
-<h6>technology:</h6>
-<p>{{viewProductDetails.technology}}</p>
-</div>
+     
+      <div class="productDetailPriceContainer">
 
-</div>
+        <h3 class="productDetailPrice">{{viewProductDetails.price}} ₾</h3>
+      
+        <span class="productDetailOrderBtn"><button mat-raised-button color="primary">order</button></span>
+  
+      </div>
+
+      <div class="productDetailDescription">
+     
+        <div class="qtyCont" >
+          <h6>Quantity</h6>
+          <div class="updownQty">
+        <div class="up"><mat-icon (click)="increaseQty()">add_circle</mat-icon></div>
+        <div class="inputValue" > <input [(ngModel)]="quantity" (change)=" inputHandleChange($event)"   type="text" name="" id=""> </div>
+        <div class="down"> <mat-icon (click)="reductQty()">remove_circle</mat-icon></div>
+        </div>
+      </div>
+        <h6 class="descTit">description:</h6>
+        <p>{{viewProductDetails.description}}</p>
+        <h6>technology:</h6>
+        <p>{{viewProductDetails.technology}}</p>
+      </div>
+
+    </div>
 
   </div>
 
 
 
 
-<div class="deliveryTermsCont">
-  <mat-tab-group mat-align-tabs="start">
-    <mat-tab label="delivery terms"> 
+  <div class="deliveryTermsCont">
+    <mat-tab-group mat-align-tabs="start">
+      <mat-tab label="delivery terms">
 
-       <h6 class="termsValue">  ratione iusto inventore ?</h6>
-      
-      
-       <p class="termsValue"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatem maxime fuga, eveniet iste officiis recusandae consequatur, eaque esse dolor dolores odit doloribus laboriosam, aliquid reprehenderit. Tempore tenetur nihil earum!</p>
+        <h6 class="termsValue"> ratione iusto inventore ?</h6>
+
+
+        <p class="termsValue"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatem maxime fuga,
+          eveniet iste officiis recusandae consequatur, eaque esse dolor dolores odit doloribus laboriosam, aliquid
+          reprehenderit. Tempore tenetur nihil earum!</p>
       </mat-tab>
-   
-       <mat-tab label="Second">Content 2</mat-tab>
-   
-  </mat-tab-group>
+
+      <mat-tab label="Second">Content 2</mat-tab>
+
+    </mat-tab-group>
 
 
-</div>
+  </div>
 </main>

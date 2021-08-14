@@ -11,18 +11,29 @@ import { fade } from '../modules/animations';
 })
 export class ViewDetailsComponent implements OnInit {
   viewProductDetails: Array<ProductModel>
-  // showDeliveryTerms=false;
+  quantity=1;
   constructor() { }
 
   ngOnInit(): void {
-    const kk = localStorage.getItem('detailPreview');
-    this.viewProductDetails = JSON.parse(kk);
-console.log(kk)
+    const detailInfo = localStorage.getItem('detailPreview');
+    this.viewProductDetails = JSON.parse(detailInfo);
+    console.log(detailInfo)
 
   }
-//   deliveryTerms(){
-//     this.showDeliveryTerms=!this.showDeliveryTerms
-//   }
-// }
+  //   deliveryTerms(){
+  //     this.showDeliveryTerms=!this.showDeliveryTerms
+  //   }
+  // }
 
+  increaseQty(){
+    this.quantity++
+  }
+  reductQty(){
+    if(this.quantity>1)
+    this.quantity--
+  }
+  inputHandleChange(event){
+    this.quantity=event.target.value
+
+  }
 }

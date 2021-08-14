@@ -28,6 +28,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
+import {MatIconModule} from '@angular/material/icon'
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +60,7 @@ import { environment } from 'src/environments/environment';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     RouterModule,
+    MatIconModule,
     HttpClientModule,
     MatTabsModule,
     AngularFireDatabaseModule,
