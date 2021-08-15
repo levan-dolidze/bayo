@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductModel } from '../modules/productPreview';
 import { fade } from '../modules/animations';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-view-details',
   templateUrl: './view-details.component.html',
@@ -11,13 +12,26 @@ import { fade } from '../modules/animations';
 })
 export class ViewDetailsComponent implements OnInit {
   viewProductDetails: Array<ProductModel>
-  quantity=1;
+  quantity = 1;
+  isDisplayOrderPop = true;
+  popUpShow:boolian=false;
+  popUpShowOpa:boolian=false
+  orderForm: FormGroup;
   constructor() { }
 
   ngOnInit(): void {
     const detailInfo = localStorage.getItem('detailPreview');
     this.viewProductDetails = JSON.parse(detailInfo);
     console.log(detailInfo)
+    this.orderForm = new FormGroup({
+      userId: new FormControl(null, [Validators.required]),
+      userName: new FormControl(null, [Validators.required]),
+      userLastname: new FormControl(null, [Validators.required]),
+      userMob: new FormControl(null, [Validators.required]),
+      userEmail: new FormControl(null, [Validators.required]),
+      userAddress: new FormControl(null, [Validators.required])
+    })
+
 
   }
   //   deliveryTerms(){
@@ -25,15 +39,25 @@ export class ViewDetailsComponent implements OnInit {
   //   }
   // }
 
-  increaseQty(){
+  increaseQty() {
     this.quantity++
   }
-  reductQty(){
-    if(this.quantity>1)
-    this.quantity--
+  reductQty() {
+    if (this.quantity > 1)
+      this.quantity--
   }
-  inputHandleChange(event){
-    this.quantity=event.target.value
+  inputHandleChange(event) {
+    this.quantity = event.target.value
 
   }
+  isDisplayOrderPopUp() {
+    this.isDisplayOrderPop = !this.isDisplayOrderPop;
+    this.popUpShow=!this.popUpShow;
+    this.popUpShowOpa=!this.popUpShowOpa
+  }
+
+onSubmitOrder(forms){
+console.log(forms)
+}
+
 }

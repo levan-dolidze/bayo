@@ -42,6 +42,7 @@ margin-top: 20px;
 
     main{
       margin:50px;
+    
     }
 
     .productId{
@@ -101,3 +102,26 @@ text-align: center;
 border: 1px solid rgb(192, 185, 185);
 border-radius: 5px
 };
+.orderPopUp{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(84, 173, 173);
+}
+.mat-form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.orderForm{
+position: absolute;
+background-color: bisque;
+width:200px;
+
+}
+.orderButton{
+  width:100%
+}
+.showMain{
+   opacity: 0.2; 
+}
+

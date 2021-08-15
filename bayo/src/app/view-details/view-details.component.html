@@ -1,5 +1,36 @@
-<main>
+<main [class.showMain]="popUpShow">
   <div class="viewDetailsContainer">
+    <div [class.showOrderForm]="popUpShowOpa" class="orderForm" [hidden]="isDisplayOrderPop">
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmitOrder(orderForm.value)"   >
+      <mat-form-field appearance="fill">
+        <mat-label>ID number</mat-label>
+        <input matInput formControlName="userId">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="userName">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Lastname</mat-label>
+        <input matInput formControlName="userLastname">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Mob</mat-label>
+        <input matInput formControlName="userMob">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="userEmail">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="userAddress">
+      </mat-form-field>
+    
+      <button [disabled]="orderForm.invalid"  class="orderButton" mat-raised-button color="primary">Order</button>
+      
+    </form>
+  </div>
     <div class="viewDetailsFoto">
       <img [src]="viewProductDetails.image">
 
@@ -16,7 +47,7 @@
 
         <h3 class="productDetailPrice">{{viewProductDetails.price}} ₾</h3>
       
-        <span class="productDetailOrderBtn"><button mat-raised-button color="primary">order</button></span>
+        <span class="productDetailOrderBtn"><button (click)='isDisplayOrderPopUp()' mat-raised-button color="primary">order</button></span>
   
       </div>
 
@@ -43,6 +74,8 @@
 
 
 
+
+
   <div class="deliveryTermsCont">
     <mat-tab-group mat-align-tabs="start">
       <mat-tab label="delivery terms">
@@ -61,4 +94,6 @@
 
 
   </div>
+
+
 </main>
