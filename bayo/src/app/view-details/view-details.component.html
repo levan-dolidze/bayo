@@ -1,6 +1,6 @@
-<main [class.showMain]="popUpShow">
-  <div class="viewDetailsContainer">
-    <div [class.showOrderForm]="popUpShowOpa" class="orderForm" [hidden]="isDisplayOrderPop">
+
+<div [class.showOrderForm]="popUpShowOpa"  [hidden]="isDisplayOrderPop">
+  <h5>apply your order form <mat-icon class="closeIcon" (click)="closeOrderPopUp()">close</mat-icon> </h5>
     <form [formGroup]="orderForm" (ngSubmit)="onSubmitOrder(orderForm.value)"   >
       <mat-form-field appearance="fill">
         <mat-label>ID number</mat-label>
@@ -24,13 +24,18 @@
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Address</mat-label>
-        <input matInput formControlName="userAddress">
+        <input matInput formControlName="userAddress" >
       </mat-form-field>
     
       <button [disabled]="orderForm.invalid"  class="orderButton" mat-raised-button color="primary">Order</button>
       
     </form>
   </div>
+
+<main>
+  
+
+  <div [class.showMain]="popUpShow" class="viewDetailsContainer" >
     <div class="viewDetailsFoto">
       <img [src]="viewProductDetails.image">
 
@@ -42,25 +47,31 @@
         {{viewProductDetails.title}}
       </h4>
 
-     
+
       <div class="productDetailPriceContainer">
 
         <h3 class="productDetailPrice">{{viewProductDetails.price}} ₾</h3>
-      
-        <span class="productDetailOrderBtn"><button (click)='isDisplayOrderPopUp()' mat-raised-button color="primary">order</button></span>
-  
+
+        <span class="productDetailOrderBtn"><button (click)='isDisplayOrderPopUp()' mat-raised-button
+            color="primary">order</button></span>
+
       </div>
 
       <div class="productDetailDescription">
-     
-        <div class="qtyCont" >
+
+        <div class="qtyCont">
           <h6>Quantity</h6>
           <div class="updownQty">
-        <div class="up"><mat-icon (click)="increaseQty()">add_circle</mat-icon></div>
-        <div class="inputValue" > <input [(ngModel)]="quantity" (change)=" inputHandleChange($event)"   type="text" name="" id=""> </div>
-        <div class="down"> <mat-icon (click)="reductQty()">remove_circle</mat-icon></div>
+            <div class="up">
+              <mat-icon (click)="increaseQty()">add_circle</mat-icon>
+            </div>
+            <div class="inputValue"> <input [(ngModel)]="quantity" (change)=" inputHandleChange($event)" type="text"
+                name="" id=""> </div>
+            <div class="down">
+              <mat-icon (click)="reductQty()">remove_circle</mat-icon>
+            </div>
+          </div>
         </div>
-      </div>
         <h6 class="descTit">description:</h6>
         <p>{{viewProductDetails.description}}</p>
         <h6>technology:</h6>
@@ -70,10 +81,6 @@
     </div>
 
   </div>
-
-
-
-
 
 
   <div class="deliveryTermsCont">

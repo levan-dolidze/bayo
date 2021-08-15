@@ -33,7 +33,6 @@ margin-top: 20px;
       object-fit: cover;
     }
     .viewDetailsDescr{
-      /* background-color: rgb(46, 129, 129); */
       width: 400px;
       padding:  20px;
   
@@ -45,12 +44,7 @@ margin-top: 20px;
     
     }
 
-    .productId{
-      /* padding: 20px; */
-    }
-.productDetailTitle{
-  /* padding: 0px 20px; */
-}
+
 .productDetailPriceContainer{
 
   display: flex;
@@ -111,17 +105,29 @@ border-radius: 5px
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-.orderForm{
-position: absolute;
-background-color: bisque;
-width:200px;
 
+ 
+ 
 }
+
+
+.showOrderForm{
+position: absolute;
+margin-left: 43%;
+z-index: 1;
+margin-top: 50px;
+text-align: center;
+/* border: 1px solid #79c446;
+padding: 10px; */
+}
+
 .orderButton{
   width:100%
 }
 .showMain{
-   opacity: 0.2; 
+  opacity: 0.1;
+}
+.closeIcon{
+  cursor: pointer;
 }
 

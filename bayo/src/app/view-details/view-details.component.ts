@@ -14,8 +14,10 @@ export class ViewDetailsComponent implements OnInit {
   viewProductDetails: Array<ProductModel>
   quantity = 1;
   isDisplayOrderPop = true;
-  popUpShow:boolian=false;
-  popUpShowOpa:boolian=false
+  popUpShow = false;
+  popUpShowOpa = false;
+
+
   orderForm: FormGroup;
   constructor() { }
 
@@ -51,13 +53,17 @@ export class ViewDetailsComponent implements OnInit {
 
   }
   isDisplayOrderPopUp() {
-    this.isDisplayOrderPop = !this.isDisplayOrderPop;
-    this.popUpShow=!this.popUpShow;
-    this.popUpShowOpa=!this.popUpShowOpa
+    this.isDisplayOrderPop = false;
+    this.popUpShow = true;
+    this.popUpShowOpa = true;
+
   }
 
-onSubmitOrder(forms){
-console.log(forms)
-}
-
+  onSubmitOrder(forms) {
+    console.log(forms)
+  }
+  closeOrderPopUp(){
+    this.isDisplayOrderPop = true;
+this.popUpShow=false;
+  }
 }
