@@ -42,7 +42,7 @@ margin: 0 auto;
       border-radius: 5px;
       -webkit-animation: fadeInOut 2s;
       animation: fadeInOut 2s;
-
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   }
   .messageSent p{

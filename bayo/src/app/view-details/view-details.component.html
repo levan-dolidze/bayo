@@ -1,7 +1,8 @@
 
 <div [class.showOrderForm]="popUpShowOpa"  [hidden]="isDisplayOrderPop">
-  <h5>apply your order form <mat-icon class="closeIcon" (click)="closeOrderPopUp()">close</mat-icon> </h5>
-    <form [formGroup]="orderForm" (ngSubmit)="onSubmitOrder(orderForm.value)"   >
+
+    <form [hidden]="isDisplayedSentOrder" [formGroup]="orderForm" (ngSubmit)="onSubmitOrder(orderForm.value)" (ngSubmit)="onSubmitProductInfo()"   >
+      <h5>apply your order form <mat-icon class="closeIcon" (click)="closeOrderPopUp()">close</mat-icon> </h5>
       <mat-form-field appearance="fill">
         <mat-label>ID number</mat-label>
         <input matInput formControlName="userId">
@@ -30,6 +31,9 @@
       <button [disabled]="orderForm.invalid"  class="orderButton" mat-raised-button color="primary">Order</button>
       
     </form>
+    <div   class="messageSent" [hidden]="isDisplayedSent" >
+      <p>thanks {{orderForm.value.userName}}, Your order has been accepted</p>
+      </div>
   </div>
 
 <main>
@@ -52,7 +56,7 @@
 
         <h3 class="productDetailPrice">{{viewProductDetails.price}} ₾</h3>
 
-        <span class="productDetailOrderBtn"><button (click)='isDisplayOrderPopUp()' mat-raised-button
+        <span class="productDetailOrderBtn"><button (click)="updateOrder()"  (click)='isDisplayOrderPopUp()' mat-raised-button
             color="primary">order</button></span>
 
       </div>
@@ -72,6 +76,7 @@
             </div>
           </div>
         </div>
+        <h5 class="total">Total:{{total}} ₾</h5>
         <h6 class="descTit">description:</h6>
         <p>{{viewProductDetails.description}}</p>
         <h6>technology:</h6>
