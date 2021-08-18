@@ -132,7 +132,20 @@ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2p
 .total{
   margin-top: 10px;
 }
-
+@keyframes fadeInOut {
+  0% {
+      opacity: 0;
+  }
+  16% {
+     opacity: 1;
+  }
+  84% {
+     opacity: 1;
+  }
+  100% {
+     opacity: 0;
+  }
+}
 .messageSent{
   position: absolute;
   width: 200px;
@@ -141,8 +154,8 @@ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2p
   margin: 0 auto;
   margin-top: 20px;
   border-radius: 5px;
-  -webkit-animation: fadeInOut 2s;
-  animation: fadeInOut 2s;
+  -webkit-animation: fadeInOut 3s;
+  animation: fadeInOut 3s;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 }

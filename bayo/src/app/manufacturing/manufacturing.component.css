@@ -1,3 +1,83 @@
 main{
-    height: 2000px;
+    /* height: 4000px; */
+}
+.titleTechnology,.technicalDataTitle,.ProcessVideos,.BreweryProcess{
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(197, 65, 65);
+}
+.image1,.imageDiv1{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.image1 img,.imageDiv1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.textTechnology,.BreweryProcessText1{
+   width: 80%;
+   margin: 0 auto;
+   margin-top: 20px;
+}
+
+.technicalDataList{
+    margin-top: 20px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+.image2{
+    width: 100%;
+    height: 400px;
+
+
+
+}
+.image2 img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.image2{
+    margin-top: 20px;
+}
+
+.ProcesessCont,.videoTechCont{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+   
+
+}
+.text{
+    width: 400px;
+    padding: 20px;
+    height: 300px;
+}
+.imageDiv{
+    width: 400px;
+    height: 300px;
+display: flex;
+
+}
+.imageDiv img{
+width: 100%;
+height: 300px;
+object-fit: cover;
+
+
+}
+.video1,.video2{
+    width: 400px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.video1 iframe,.video2 iframe{
+width: 100%;
+margin-left: 20px;
 }
