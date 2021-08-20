@@ -4,7 +4,7 @@ export let fade =  trigger('fade', [
    
     transition('void => *', [
       style({backgroundColor:'yellow',opacity:0}),
-      animate(2000)
+      animate(1000)
     ])
     
 

@@ -1,4 +1,19 @@
-
 <main>
-<p>our-beer works!</p>
+    <p>our-beer works!</p>
+
+    <input  type="text" >
+
+    <div *ngFor="let products of productsBeer|filter:'london':'title'">
+        {{products.id}}
+        {{products.title}}
+        {{products.description}}
+        {{products.price}}
+        {{products.quantity}}
+        {{products.technology}}
+        {{products.productQty}}
+    </div>
+
+
+
+
 </main>

@@ -59,8 +59,6 @@ export class ViewDetailsComponent implements OnInit {
 
     }
 
-
-
   }
 
   inputHandleChange(event) {
@@ -85,7 +83,8 @@ export class ViewDetailsComponent implements OnInit {
     this.http.post('https://bayocontact-a7f9d-default-rtdb.firebaseio.com/orderProductInfo.json', `${JSON.stringify(updetedOrderStr)}`).subscribe(responseData => {
       console.log(responseData);
       this.isDisplayedSent = false;
-      this.isDisplayedSentOrder = true
+      this.isDisplayedSentOrder = true;
+      localStorage.clear();
       setTimeout(() => {
         this.router.navigate([''])
       }, 3000);

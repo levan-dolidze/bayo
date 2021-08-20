@@ -1,6 +1,11 @@
 main{
     /* height: 2000px; */
  }
+ .shortDescrTitle,.ourProductTitle{
+     text-align: center;
+     margin-top: 20px;
+     color: rgb(197, 65, 65);
+ }
 #carouselContainer{
     margin: 0 auto;
    width: 100%;
@@ -54,7 +59,7 @@ height: 100%;
       padding: 20px;
   }
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image:url('../../assets/bayoLogo.png');
     background-size: cover;
   }
   .productContainer{
@@ -62,6 +67,7 @@ height: 100%;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      margin-top: 20px;
   }
   .example-card{
       transition: 0.5s;
@@ -69,4 +75,8 @@ height: 100%;
  #backToTopIcon{
      cursor: pointer;
     
+ }
+ .form-inline{
+display: flex;
+justify-content: flex-end;
  }

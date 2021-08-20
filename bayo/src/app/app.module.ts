@@ -28,7 +28,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { FilterPipe } from './filter.pipe'
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import {MatIconModule} from '@angular/material/icon'
     FooterComponent,
     ViewDetailsComponent,
     TrunkatePipe,
+    FilterPipe,
 
 
   ],

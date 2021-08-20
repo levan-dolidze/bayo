@@ -1,7 +1,7 @@
 
 <main>
 
-<h3 class="shortDescrTitle">short description</h3>
+<h4 class="shortDescrTitle">short description</h4>
 
  <div class="descriptionContaner">
 <div class="desc1">
@@ -40,14 +40,23 @@
 
 
     <h3 class="ourProductTitle">our products</h3>
+    <form class="form-inline waves-light" mdbWavesEffect  (ngSubmit)="searchItems(searchInput)" [formGroup]="searchInput"  >
+      <div class="md-form mt-0">
+        <input  class="form-control mr-sm-2" type="text" placeholder="Search" formControlName="search"   >
+      </div>
+    
+      <button mat-button color="primary">  <mat-icon>search</mat-icon></button>
+     </form>
+     <input type="text" [(ngModel)]='title'>
 <div class="productContainer"  >
 
-   
-  <mat-card *ngFor="let allProductsPreview of productPreview; let i= index"  class="example-card" 
+
+  <mat-card *ngFor="let allProductsPreview of productPreview|filter:title:'title'; let i= index"  class="example-card" 
   @fade>
 
+
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
+        <div mat-card-avatar class="example-header-image"  ></div>
         
         <mat-card-title>{{allProductsPreview.title}}</mat-card-title>
         <mat-card-subtitle>price:{{allProductsPreview.price}} ₾</mat-card-subtitle>
