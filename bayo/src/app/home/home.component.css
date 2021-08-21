@@ -80,3 +80,7 @@ height: 100%;
 display: flex;
 justify-content: flex-end;
  }
+ .md-form {
+     width: 300px;
+    margin: 0 auto;
+ }

@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   searchInput: FormGroup;
   parced;
   images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/400`);
+  title='';
   productPreview: Array<ProductModel> = [{
     id: 1,
     title: "TRY",
@@ -52,7 +53,7 @@ export class HomeComponent implements OnInit {
   },
   {
     id: 4,
-    title: "beer",
+    title: "IPA TATTOO",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat impedit, maxime voluptatem id blanditiis! Pariatur aliquid, dicta sapiente quibusdam laudantium totam voluptate reiciendis nemo ipsa impedit amet ducimus aut!",
     technology: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat impedit, maxime voluptatem id blanditiis! Pariatur aliquid, dicta sapiente quibusdam laudantium totam voluptate reiciendis nemo ipsa impedit amet ducimus aut!",
     image: "assets/try.jpg",
@@ -87,43 +88,43 @@ export class HomeComponent implements OnInit {
 
 
   
-  searchItems(searchValue) {
+  // searchItems(searchValue) {
 
-    const getAllTitle = () => {
-      const serchedItems = this.productPreview.map((item) => {
-        return item.title
-      })
-      return serchedItems
-    }
-    const titles = getAllTitle()
+  //   const getAllTitle = () => {
+  //     const serchedItems = this.productPreview.map((item) => {
+  //       return item.title
+  //     })
+  //     return serchedItems
+  //   }
+  //   const titles = getAllTitle()
 
 
-    const getFiltredTitle = (data) => {
+  //   const getFiltredTitle = (data) => {
 
-      const filtredTitles = data.filter((items) => {
-        return (items.toLowerCase().includes(searchValue.value.search)) || (items.toUpperCase().includes(searchValue.value.search));
-      })
-      return filtredTitles
-    }
-    const result = getFiltredTitle(titles)
+  //     const filtredTitles = data.filter((items) => {
+  //       return (items.toLowerCase().includes(searchValue.value.search)) || (items.toUpperCase().includes(searchValue.value.search));
+  //     })
+  //     return filtredTitles
+  //   }
+  //   const result = getFiltredTitle(titles)
 
-    const resultTitle = (data) => {
+  //   const resultTitle = (data) => {
 
-      if (data.length > 0) {
+  //     if (data.length > 0) {
 
-        alert("found");
+  //       alert("found");
         
-      } 
-      else {
-        alert('not found')
-      }
-    }
-    resultTitle(result);
+  //     } 
+  //     else {
+  //       alert('not found')
+  //     }
+  //   }
+  //   resultTitle(result);
 
 
 
 
-  }
+  // }
 
   
 }

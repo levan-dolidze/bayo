@@ -1,63 +1,67 @@
-
 <main>
 
-<h4 class="shortDescrTitle">short description</h4>
+  <h4 class="shortDescrTitle">short description</h4>
 
- <div class="descriptionContaner">
-<div class="desc1">
-    <h3 class="descTitle">Lorem ipsum, dolor sit amet consectetur</h3>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, eos omnis cumque magnam sint illum fugiat iste laudantium dolore neque iure et quidem eligendi expedita fuga asperiores, eaque necessitatibus accusamus!</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse porro minus dignissimos, quia tem</p>
+  <div class="descriptionContaner">
+    <div class="desc1">
+      <h3 class="descTitle">Lorem ipsum, dolor sit amet consectetur</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, eos omnis cumque magnam sint illum fugiat
+        iste laudantium dolore neque iure et quidem eligendi expedita fuga asperiores, eaque necessitatibus accusamus!
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse porro minus dignissimos, quia tem</p>
 
-</div>
-
-
-<div class="desc2">
- <img src="assets/descrImg.jpg" alt="">
-
-</div>
-
-
- </div>
-
-
-
-    <div id="carouselContainer">
-        <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows"
-            [showNavigationIndicators]="showNavigationIndicators">
-            <ng-template ngbSlide *ngFor="let image of images">
-                <div class="picsum-img-wrapper">
-                    <img [src]="image" alt="Random slide">
-                </div>
-                <div class="carousel-caption">
-                    <h3>No mouse navigation</h3>
-                    <p>This carousel hides navigation arrows and indicators.</p>
-                </div>
-            </ng-template>
-        </ngb-carousel>
-    
     </div>
 
 
-    <h3 class="ourProductTitle">our products</h3>
-    <form class="form-inline waves-light" mdbWavesEffect  (ngSubmit)="searchItems(searchInput)" [formGroup]="searchInput"  >
+    <div class="desc2">
+      <img src="assets/descrImg.jpg" alt="">
+
+    </div>
+
+
+  </div>
+
+
+
+  <div id="carouselContainer">
+    <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows"
+      [showNavigationIndicators]="showNavigationIndicators">
+      <ng-template ngbSlide *ngFor="let image of images">
+        <div class="picsum-img-wrapper">
+          <img [src]="image" alt="Random slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>No mouse navigation</h3>
+          <p>This carousel hides navigation arrows and indicators.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+
+  </div>
+
+
+  <h3 class="ourProductTitle">our products</h3>
+  <!-- <form class="form-inline waves-light" mdbWavesEffect  (ngSubmit)="searchItems(searchInput)" [formGroup]="searchInput"  >
       <div class="md-form mt-0">
         <input  class="form-control mr-sm-2" type="text" placeholder="Search" formControlName="search"   >
       </div>
     
       <button mat-button color="primary">  <mat-icon>search</mat-icon></button>
-     </form>
-     <input type="text" [(ngModel)]='title'>
-<div class="productContainer"  >
+     </form> -->
+  <div class="md-form mt-0">
+    <input class="form-control mr-sm-2" placeholder="Search" [(ngModel)]="title">
+  </div>
+
+  <div class="productContainer">
 
 
-  <mat-card *ngFor="let allProductsPreview of productPreview|filter:title:'title'; let i= index"  class="example-card" 
-  @fade>
+    <mat-card *ngFor="let allProductsPreview of productPreview|filter:title:'title'; let i= index" class="example-card"
+      @fade>
 
 
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"  ></div>
-        
+        <div mat-card-avatar class="example-header-image"></div>
+
         <mat-card-title>{{allProductsPreview.title}}</mat-card-title>
         <mat-card-subtitle>price:{{allProductsPreview.price}} ₾</mat-card-subtitle>
       </mat-card-header>
@@ -73,24 +77,21 @@
       </mat-card-actions>
     </mat-card>
 
-   
-
-
-      
-    </div>
 
 
 
- 
-    
-    <!-- <div id="backToTopIcon" (click)="scrollToElement(target)">
+
+  </div>
+
+
+
+
+
+  <!-- <div id="backToTopIcon" (click)="scrollToElement(target)">
       <img class="upToTopImage" src="assets/uptotopicon.png" alt="">
       <div #target></div>
      </div> -->
-  
+
 
 
 </main>
-
-
-
