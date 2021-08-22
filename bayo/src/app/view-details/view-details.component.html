@@ -2,7 +2,7 @@
 <div [class.showOrderForm]="popUpShowOpa"  [hidden]="isDisplayOrderPop">
 
     <form [hidden]="isDisplayedSentOrder" [formGroup]="orderForm" (ngSubmit)="onSubmitOrder(orderForm.value)" (ngSubmit)="onSubmitProductInfo()"   >
-      <h5>apply your order form <mat-icon class="closeIcon" (click)="closeOrderPopUp()">close</mat-icon> </h5>
+      <h5 class="applyTitle">apply your order form <mat-icon class="closeIcon" (click)="closeOrderPopUp()">close</mat-icon> </h5>
       <mat-form-field appearance="fill">
         <mat-label>ID number</mat-label>
         <input matInput formControlName="userId">

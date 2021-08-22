@@ -75,7 +75,7 @@ export class ViewDetailsComponent implements OnInit {
   onSubmitOrder(forms) {
     this.http.post('https://bayocontact-a7f9d-default-rtdb.firebaseio.com/orderUserInfo.json', `${JSON.stringify(forms)}`).subscribe(responseData => {
       console.log(responseData);
-     
+
     });
   }
   onSubmitProductInfo() {

@@ -1,5 +1,5 @@
 main{
-    height: 800px;
+    
    
 }
 .aboutUsCont{
@@ -68,3 +68,28 @@ align-items: center;
 .aboutBrand{
     padding: 20px;
 }
+
+ 
+@media (max-width: 1030px) {
+    .title{
+        font-size: large;
+    }
+    .CeoSpeech,.aboutBrand {
+        font-size: small
+    }
+    .yearsFounded,.employees,.endWorkTime,.emailPrevented{
+        width: 120px;
+        height: 90px;
+    }
+    .innerTitle{
+        font-size: small;
+    }
+    .innerText{
+        font-size: small;
+    }
+    .aboutUsImg{
+        width:300px;
+        margin-bottom: 20px;
+    }
+  
+      }

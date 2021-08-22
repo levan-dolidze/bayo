@@ -1,18 +1,15 @@
 
 .navContainer{
     padding: 20px;
-    /* background-color:#344955; */
     background-image: url("/assets/navBackImg.jpg");
     display: flex;
     justify-content: space-between;
     height: 270px;
-    position: sticky;
-    
-
+    position: relative;
 }
 .navSlogan{
     position: absolute;
-   margin:150px;
+    margin:150px;
     color: black;
 
    
@@ -21,8 +18,8 @@
     text-decoration: none;
     color: white;
     padding: 10px;
- border-radius: 5px;
- /* margin-right: 20px; */
+    border-radius: 5px;
+ 
 
 }
 .navContainer select{
@@ -30,18 +27,17 @@
     background-image: url("/assets/navBackImg.jpg");
     color: rgb(197, 65, 65);  
     cursor: pointer;
-     margin-left: 10px;
+    margin-left: 10px;
 }
 
 .active{
-   background-color:  rgb(197, 65, 65);   
+   background-color:  rgb(197, 65, 65);  
+   height: 40px; 
 }
 .navBar{
  padding: 25px;
-float: right;
+ float: right;
 
-  
-   
 }
 .logoImg{
  width: 70px;  
@@ -54,3 +50,33 @@ height: 100%;
 object-fit: cover;
 border-radius: 5px;
 }
+
+
+@media (max-width: 1030px) {
+  
+    .navSlogan {
+    
+      font-size:small;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 0px;
+    }
+    .navBar{
+        font-size: small;
+        display: flex;
+        flex-wrap: wrap;
+      
+    }
+    .logoImg{
+        width: 42px;
+        height: 42px;
+        margin-top: 20px;
+    }
+  
+    select{
+        height: 20px;
+    }
+    .navContainer{
+        height: 190px;
+    }
+  }

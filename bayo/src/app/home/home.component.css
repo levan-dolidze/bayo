@@ -84,3 +84,21 @@ justify-content: flex-end;
      width: 300px;
     margin: 0 auto;
  }
+
+ 
+@media (max-width: 1030px) {
+.shortDescrTitle,.ourProductTitle,.carouselTile,.carouselDesc,.descTitle{
+    font-size: large;
+}
+.CeoSpeech{
+    font-size: small;
+}
+.picsum-img-wrapper img{
+height: 240px;
+}
+.desc2{
+   width: 240px;
+   height: 180px;
+}
+
+  }

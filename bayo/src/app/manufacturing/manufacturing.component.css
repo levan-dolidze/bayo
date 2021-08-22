@@ -8,7 +8,7 @@ main{
 }
 .image1,.imageDiv1{
     width: 400px;
-    height: 400px;
+    height: 300px;
     margin: 0 auto;
     margin-top: 20px;
 }
@@ -54,6 +54,7 @@ object-fit: cover;
    
 
 }
+
 .text{
     width: 400px;
     padding: 20px;
@@ -79,5 +80,38 @@ object-fit: cover;
 }
 .video1 iframe,.video2 iframe{
 width: 100%;
-margin-left: 20px;
 }
+
+@media (max-width: 1030px) {
+    .titleTechnology,.technicalDataTitle,.BreweryProcess,.ProcessVideos{
+        font-size: large;
+    }
+    .textTechnology,.technicalDataList,.text{
+        font-size: small;
+    }
+  .image1,.imageDiv1{
+width: 240px;
+height: 180px;
+  }
+  .imageDiv{
+    width: 240px;
+    height: 180px;
+  }
+  .imageDiv img{
+    
+    height: 180px;
+  }
+
+  
+  .video1,.video2{
+      width: 240px;
+
+  }
+  .video1 iframe,.video2 iframe{
+      height: 180px;
+  }
+  .image2{
+    height: 240px;
+}
+}
+      
