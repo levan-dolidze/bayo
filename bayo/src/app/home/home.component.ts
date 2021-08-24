@@ -19,7 +19,9 @@ export class HomeComponent implements OnInit {
   showNavigationIndicators = false;
   searchInput: FormGroup;
   parced;
-  images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/400`);
+  images = ["assets/caroucel1.jpg", 
+  "assets/caroucel2.jpg", 
+  "assets/caroucel3.jpg"];
   title='';
   productPreview: Array<ProductModel> = [{
     id: 1,

@@ -5,6 +5,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
+import { title } from 'process';
 @Component({
   selector: 'app-view-details',
   templateUrl: './view-details.component.html',
@@ -15,22 +16,24 @@ import { Router } from '@angular/router';
 })
 export class ViewDetailsComponent implements OnInit {
   viewProductDetails: Array<ProductModel>
-  quantity = 1;
   isDisplayOrderPop = true;
   popUpShow = false;
   popUpShowOpa = false;
-  total = 0;
-  mainPrice;
   isDisplayedSent = true;
   isDisplayedSentOrder = false;
+  quantity = 1;
+  total = 0;
+  mainPrice;
+
   orderForm: FormGroup;
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     const detailInfo = localStorage.getItem('detailPreview');
     this.viewProductDetails = JSON.parse(detailInfo);
-    this.total = this.viewProductDetails.price;
-    this.mainPrice = this.viewProductDetails.price;
+    let updetedPrice = JSON.parse(localStorage.getItem('detailPreview'));
+    this.total = updetedPrice.price;
+    this.mainPrice = updetedPrice.price;
     this.orderForm = new FormGroup({
       userId: new FormControl(null, [Validators.required]),
       userName: new FormControl(null, [Validators.required]),
