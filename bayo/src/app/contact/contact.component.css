@@ -1,12 +1,12 @@
 main{
-    /* height: 800px; */
+    height: 500px;
 }
 .formField {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 250px;
-margin: 0 auto;
+    margin: 0 auto;
     margin-top: 20px;
     margin-bottom:20px;
     

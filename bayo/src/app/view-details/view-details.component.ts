@@ -5,7 +5,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
-import { title } from 'process';
+
 @Component({
   selector: 'app-view-details',
   templateUrl: './view-details.component.html',
@@ -21,6 +21,7 @@ export class ViewDetailsComponent implements OnInit {
   popUpShowOpa = false;
   isDisplayedSent = true;
   isDisplayedSentOrder = false;
+  isFreeDelivery=true;
   quantity = 1;
   total = 0;
   mainPrice;
@@ -53,13 +54,18 @@ export class ViewDetailsComponent implements OnInit {
   increaseQty() {
     this.quantity++
     this.total += this.mainPrice;
+    if(this.total>50){
+    this.isFreeDelivery=false;
 
+    }
   }
   reductQty() {
     if (this.quantity > 1) {
       this.quantity--
       this.total -= this.mainPrice;
-
+      if(this.total<=50){
+        this.isFreeDelivery=true;
+        }
     }
 
   }
@@ -102,6 +108,7 @@ export class ViewDetailsComponent implements OnInit {
     let updetedOrderStr = JSON.parse(localStorage.getItem('detailPreview'));
     updetedOrderStr.totalPrice = this.total;
     updetedOrderStr.productQty = this.quantity;
+    updetedOrderStr.deliveryFee=this.isFreeDelivery;
     localStorage.setItem("detailPreview", JSON.stringify(updetedOrderStr));
 
   }

@@ -8,6 +8,7 @@ constructor(public id:string|number,
     public technology:string,
     public totalPrice:number,
     public productQty:number,
+    public deliveryFee:boolean
 
     
     ){

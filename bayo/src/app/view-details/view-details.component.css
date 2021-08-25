@@ -179,3 +179,11 @@ color: white;
 padding: 20px;
 
 }
+
+.freeDelivery{
+  color:rgb(197, 65, 65);
+  margin:13px 0px 0px 15px;
+}
+.info{
+  display: flex;
+}

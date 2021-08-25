@@ -54,6 +54,9 @@ object-fit: cover;
    
 
 }
+.videoTechCont{
+    margin-bottom: 20px;
+}
 
 .text{
     width: 400px;

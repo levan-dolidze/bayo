@@ -31,7 +31,8 @@ export class HomeComponent implements OnInit {
     image: "assets/try.jpg",
     price: 6,
     totalPrice: 0,
-    productQty: 0
+    productQty: 0,
+    deliveryFee:false
   },
   {
     id: 2,
@@ -41,7 +42,8 @@ export class HomeComponent implements OnInit {
     image: "assets/try.jpg",
     price: 7,
     totalPrice: 0,
-    productQty: 0
+    productQty: 0,
+    deliveryFee:false
   },
   {
     id: 3,
@@ -51,7 +53,8 @@ export class HomeComponent implements OnInit {
     image: "assets/try.jpg",
     price: 7,
     totalPrice: 0,
-    productQty: 0
+    productQty: 0,
+    deliveryFee:false
   },
   {
     id: 4,
@@ -61,7 +64,8 @@ export class HomeComponent implements OnInit {
     image: "assets/try.jpg",
     price: 8,
     totalPrice: 0,
-    productQty: 0
+    productQty: 0,
+    deliveryFee:false
   }
 
   ]

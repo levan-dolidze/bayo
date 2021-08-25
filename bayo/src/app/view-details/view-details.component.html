@@ -77,7 +77,10 @@
             </div>
           </div>
         </div>
+        <span class="info">
         <h5 class="total">Total:{{total}} ₾</h5>
+        <h6 class="freeDelivery"  [hidden]="isFreeDelivery">free delivery</h6>
+      </span>
         <h6 class="descTit">description:</h6>
         <p>{{viewProductDetails.description}}</p>
         <h6>technology:</h6>
