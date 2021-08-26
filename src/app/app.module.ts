@@ -27,9 +27,10 @@ import { TrunkatePipe } from './pipes/trunkate.pipe';
 import {MatTabsModule} from '@angular/material/tabs';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 import {MatIconModule} from '@angular/material/icon';
-import { FilterPipe } from './filter.pipe'
+import { FilterPipe } from './filter.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
