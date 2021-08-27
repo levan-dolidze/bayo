@@ -9,7 +9,7 @@
     bottom:0;
     display: flex;
   justify-content: center;
-  background: linear-gradient(to top,  #F2F3F5 0%,#F2F3F5 30%,rgb(197, 65, 65) 70%,rgb(197, 65, 65) 100%);
+  background: linear-gradient(to top,  #fffffb  0%,#fffffb  30%,rgb(197, 65, 65) 70%,rgb(197, 65, 65) 100%);
    
 }
 
