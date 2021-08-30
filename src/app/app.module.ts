@@ -73,12 +73,9 @@ import { FilterPipe } from './filter.pipe';
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
-      }
-    })
-
-
-
-
+      },
+      extend: true
+    }),
 
   ],
   providers: [
