@@ -1,26 +1,26 @@
-import { Injectable } from '@angular/core';
-import {
-  HttpRequest,
-  HttpHandler,
-  HttpEvent,
-  HttpInterceptor
-} from '@angular/common/http';
-import { Observable } from 'rxjs';
+// import { Injectable } from '@angular/core';
+// import {
+//   HttpRequest,
+//   HttpHandler,
+//   HttpEvent,
+//   HttpInterceptor
+// } from '@angular/common/http';
+// import { Observable } from 'rxjs';
 
-@Injectable()
-export class TokenInterceptor implements HttpInterceptor {
+// @Injectable()
+// export class TokenInterceptor implements HttpInterceptor {
 
-  constructor() {}
+//   constructor() {}
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-   const lang =localStorage.getItem('lang') || 'en';
-   request=request.clone({
-     setHeaders:{
-       'Accept-Language': lang
-     }
+//   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+//    const lang1 =localStorage.getItem('lang') || 'en';
+//    request=request.clone({
+//      setHeaders:{
+//        'Accept-Language': lang1
+//      }
 
-   });
+//    });
     
-    return next.handle(request);
-  }
-}
+//     return next.handle(request);
+//   }
+// }
