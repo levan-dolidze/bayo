@@ -1,7 +1,7 @@
 
 .navContainer{
     padding: 20px;
-    background-image: url("../../assets/navBackImg.jpg");
+    /* background-image: url("/assets/navBackImg.jpg"); */
     display: flex;
     justify-content: space-between;
     height: 270px;
